@@ -1,0 +1,26 @@
+button{
+    color: black;
+    background-color: #e1b8cd;
+    border: #563d7c;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+button:hover{
+    background-color:#563d7c ;
+}
+.search-wrapper{
+    display: flex;
+    flex-wrap:wrap;
+}
+.left-container{
+    padding:1.5rem;
+    width:40%;
+    
+}
+.right-container{
+    width:50%;
+    padding-top: 1rem;
+}
+table {
+    width: 100%;
+  }
