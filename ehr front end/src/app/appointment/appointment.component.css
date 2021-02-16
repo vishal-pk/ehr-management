@@ -1,0 +1,19 @@
+form{
+    font-size: 1rem;
+}
+.appointmentform-container{
+    padding-top:2rem;
+}
+h1{
+    margin-top: 10px;
+    font-weight: bold;
+}
+button{
+    background-color: #e1b8cd;
+    border: #563d7c;
+    font-weight: bold;
+}
+button:hover{
+    background-color:#563d7c ;
+    color:white;
+}

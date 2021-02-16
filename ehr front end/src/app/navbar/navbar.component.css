@@ -1,0 +1,21 @@
+
+.navbar{
+    z-index:10;
+    height:10%;
+    background-color:#563d7c;
+}
+.navbar a{
+    color:white;
+}
+.nav-item a:hover{
+    text-decoration: underline;
+    color:white;
+}
+.right{
+    float:right;
+}
+.icon{
+    vertical-align: middle;
+    text-align: center;
+    margin-right: 10px;
+}
