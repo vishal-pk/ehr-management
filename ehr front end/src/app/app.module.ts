@@ -17,6 +17,9 @@ import { SearchComponent } from './search/search.component';
 import { MatTableModule } from '@angular/material/table';
 import { DataSource } from '@angular/cdk/table';
 import { DoctorComponent } from './doctor/doctor.component';
+import { AuthService } from './service/auth.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,8 +41,10 @@ import { DoctorComponent } from './doctor/doctor.component';
     MatListModule,
     BrowserAnimationsModule,
     MatTableModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
