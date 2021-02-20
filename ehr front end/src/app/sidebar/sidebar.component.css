@@ -1,0 +1,45 @@
+/* sidenav */
+.sidenav {
+    
+    height: 100%;
+    width: 4%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    /* left: 0; */
+    background-color: #e1b8cd;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  .sidenav:hover{
+      width: auto;
+      overflow: visible;
+      transition: .2s;
+  }
+  .icon{
+      margin-right: 10px;
+      text-align: center;
+      vertical-align: middle; 
+  }
+  a:first-child{
+    margin-top: 2.5rem;
+  }
+  .sidenav a {
+    padding: 6px 8px 20px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .sidenav a:hover {
+    color: white;
+  }
+  
+
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
