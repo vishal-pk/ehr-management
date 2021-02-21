@@ -1,0 +1,38 @@
+.prescription-wrapper{
+   width:95%;
+   height:auto;
+   padding:1rem;
+   margin:1rem;
+   
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+label{
+    font-size:15px;
+    font-weight: bold;
+}
+input,select{
+    font-size: 15px;
+}
+.pres-input{
+    width:40%;
+}
+.prescriptionList{
+    width:55%;
+}
+table{
+    width:100%;
+}
+th,td{
+    font-size: small;
+}
+.trash{
+    background-color: white;
+    border:1px grey;
+}
+.trash span{
+    color:red;
+}

@@ -1,7 +1,22 @@
 <div *ngIf="user==1">
-    <app-home-component></app-home-component>
+    <app-navbar></app-navbar>
+<div>
+  <app-sidebar [user]="user"></app-sidebar>
+  <div class="main">
+    
+    <router-outlet></router-outlet>
+  </div>
+</div>
 </div>
 
 <div *ngIf="user==2">
-    <app-doctor></app-doctor>
+    
+    <app-navbar></app-navbar>
+<div>
+    <app-sidebar [user]="user"></app-sidebar>
+  <div class="main">
+    
+    <router-outlet></router-outlet>
+  </div>
+</div>
 </div>

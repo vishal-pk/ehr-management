@@ -1,0 +1,50 @@
+.Check-in-wrapper{
+    width:80%;
+}
+.label{
+    font-size:15px;
+    font-weight: bold;
+}
+.txt,textarea,select{
+    font-size: 15px;
+}
+.patientDetails,.date-time{
+    display:flex; 
+    /* flex-direction: row;  */
+    flex-wrap: wrap; 
+}
+.left-container,.right-container{
+    width:40%;
+    justify-content: space-between;
+    padding:2% 10% 2% 5%;
+}
+button{
+    width:auto;
+    height:10%;
+}
+label{
+    font-size: 15px;
+    font-weight: bold;
+    margin:5px 10px;
+}
+input{
+    font-size:small;
+}
+.space-around{
+    justify-content: space-around;
+}
+.prescribe a{
+    color:white;
+}
+.ml-4{
+    margin-left: 4%;
+}
+.heading{
+    font-size: 20px;
+    font-weight: bold;
+    padding:3%;
+    text-decoration: underline;
+}
+.btn a{
+    color:white;
+}
