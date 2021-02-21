@@ -84,12 +84,7 @@ router.post(
   [
     check('name', 'Please add name')
       .not()
-      .isEmpty(),
-    check('email', 'Please include a valid email').isEmail(),
-    check(
-      'password',
-      'Please enter a password with 6 or more characters'
-    ).isLength({ min: 6 })
+      .isEmpty()
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -97,25 +92,28 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, email , password} = req.body;
-
+    const { name, age , address,gender,dob,contactnum} = req.body;
+    
 
     try {
-      let patient = await Patient.findOne({ email });
+      // let patient = await Patient.findOne({ email });
 
-      if (patient) {
-        return res.status(400).json({ msg: 'Patient already exists' });
-      }
+      // if (patient) {
+      //   return res.status(400).json({ msg: 'Patient already exists' });
+      // }
 
       patient = new Patient({
-        name,
-        email,
-        password
+        name, 
+        age, 
+        address,
+        gender,
+        dob,
+        contactnum
       });
 
       const salt = await bcrypt.genSalt(10);
 
-      patient.password = await bcrypt.hash(password, salt);
+      // patient.password = await bcrypt.hash(password, salt);
 
       await patient.save();
 
@@ -123,7 +121,7 @@ router.post(
         patient: {
           id: patient.id,
           name:patient.name,
-          email:patient.email,
+          // email:patient.email,
         }
       };
 
