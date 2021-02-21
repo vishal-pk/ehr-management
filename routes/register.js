@@ -8,6 +8,7 @@ const auth = require('../middleware/auth');
 
 const Doctor = require('../models/Doctor');
 const Patient = require('../models/Patient');
+const Appointment=require('../models/Appointment');
 // @route     POST api/users
 // @desc      Regiter a doctor
 // @access    Public
@@ -96,12 +97,6 @@ router.post(
     
 
     try {
-      // let patient = await Patient.findOne({ email });
-
-      // if (patient) {
-      //   return res.status(400).json({ msg: 'Patient already exists' });
-      // }
-
       patient = new Patient({
         name, 
         age, 
@@ -112,16 +107,11 @@ router.post(
       });
 
       const salt = await bcrypt.genSalt(10);
-
-      // patient.password = await bcrypt.hash(password, salt);
-
       await patient.save();
-
       const payload = {
         patient: {
           id: patient.id,
           name:patient.name,
-          // email:patient.email,
         }
       };
 
@@ -136,6 +126,37 @@ router.post(
           res.json({ token });
         }
       );
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  }
+);
+
+
+
+router.post(
+  '/appointment',
+  [
+    check('pid', 'Please add patient id')
+      .not()
+      .isEmpty()
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+    const { name, age , pid,reason,date} = req.body;
+    try {
+      appointment = new Appointment({
+        name, 
+        age, 
+        pid,
+        reason,
+        date
+      });
+      await appointment.save();
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server Error');

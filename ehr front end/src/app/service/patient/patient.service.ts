@@ -11,8 +11,13 @@ export class PatientService {
   createPatient(patient){
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8');
-    console.log(patient);
     return this.http.post("http://localhost:5000/register/patient",patient,{headers:headers});
 
+  }
+
+  createAppointment(data){
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+    return this.http.post("http://localhost:5000/register/appointment",data,{headers:headers});
   }
 }

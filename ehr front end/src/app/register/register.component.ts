@@ -14,15 +14,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(data){
-    // var patient={
-    //   name:data.name,
-    //   age:data.age,
-    //   number:data.contactnum,
-    //   address:data.address,
-    //   gender:data.gender,
-    //   dob:data.dob
-    // }
-    console.log(data);
+   
     this.patientService.createPatient(data).subscribe(data=>{
       if(data['token'])
       console.log("patient created");
