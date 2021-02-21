@@ -11,5 +11,7 @@ export class AppointmentComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  submit(data){
+   console.log(data);
+  }
 }

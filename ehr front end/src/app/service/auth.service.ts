@@ -14,7 +14,6 @@ export class AuthService {
        email:email,
        password:password
      }
-    console.log("login done");
     return this.http.post("http://localhost:5000/auth/doctor",data,{headers:headers});
 
   }

@@ -1,38 +1,37 @@
-
 <div class="appointmentform-container">
-    <h1>Appointment</h1>
-    <form>
-    <div class="form-group row">
-        <label for="PatientId" class="col-sm-1 col-form-label">Patient ID</label>
-        <div class="col-sm-7">
-          <input type="number" class="form-control" id="pid" placeholder="Patient ID">
-        </div>
-    </div>
-    <div class="form-group row">
-      <label for="Name" class="col-sm-1 col-form-label">Name</label>
+  <h1>Appointment</h1>
+  <form #appointmentform="ngForm" (ngSubmit)="submit(appointmentform.value)">
+  <div class="form-group row">
+      <label for="PatientId" class="col-sm-1 col-form-label">Patient ID</label>
       <div class="col-sm-7">
-        <input type="text" class="form-control" id="inputPassword" placeholder="Name">
+        <input type="number" class="form-control" id="pid" placeholder="Patient ID" name="pid" ngModel>
+      </div>
+  </div>
+  <div class="form-group row">
+    <label for="Name" class="col-sm-1 col-form-label">Name</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" id="name" placeholder="Name" name="name" ngModel>
+    </div>
+  </div>
+  <div class="form-group row">
+      <label for="Age" class="col-sm-1 col-form-label">Age</label>
+      <div class="col-sm-7">
+        <input type="number" class="form-control" id="age" placeholder="Age" name="age" ngModel>
       </div>
     </div>
     <div class="form-group row">
-        <label for="Age" class="col-sm-1 col-form-label">Age</label>
-        <div class="col-sm-7">
-          <input type="number" class="form-control" id="inputPassword" placeholder="Age">
-        </div>
+      <label for="Reason" class="col-sm-1 col-form-label">Reason</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="reason" placeholder="Reason" name="reason" ngModel>
       </div>
-      <div class="form-group row">
-        <label for="Reason" class="col-sm-1 col-form-label">Reason</label>
-        <div class="col-sm-7">
-          <input type="text" class="form-control" id="reason" placeholder="Reason">
-        </div>
+    </div>
+    <div class="form-group row">
+      <label for="Date" class="col-sm-1 col-form-label">Date</label>
+      <div class="col-sm-2">
+        <input type="date" class="form-control" id="date" placeholder="Date" name="date" ngModel>
       </div>
-      <div class="form-group row">
-        <label for="Date" class="col-sm-1 col-form-label">Date</label>
-        <div class="col-sm-2">
-          <input type="date" class="form-control" id="date" placeholder="Date">
-        </div>
-      </div>
-      <button type="submit" class="btn mb-2">Submit</button>
-      
-  </form>
-  </div>
+    </div>
+    <button type="submit" class="btn mb-2">Submit</button>
+    
+</form>
+</div>
