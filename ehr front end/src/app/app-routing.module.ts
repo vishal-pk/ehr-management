@@ -6,6 +6,7 @@ import { CheckinComponent } from './checkin/checkin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PatientdetailsComponent } from './patientdetails/patientdetails.component';
 import { PrescriptionComponent } from './prescription/prescription.component';
+import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'checkin', component: CheckinComponent },
   { path: 'prescription', component: PrescriptionComponent },
   { path: 'patientdetails', component: PatientdetailsComponent },
- 
+  { path: 'login',component:LoginComponent}
+
 ];
 
 @NgModule({

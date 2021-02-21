@@ -22,8 +22,11 @@ import { CheckinListComponent } from './checkin-list/checkin-list.component';
 import {MatButtonModule} from '@angular/material/button';
 import { CheckinComponent } from './checkin/checkin.component';
 import { PrescriptionComponent } from './prescription/prescription.component';
-import {FormsModule} from '@angular/forms';
 import { PatientdetailsComponent } from './patientdetails/patientdetails.component';
+import { AuthService } from './service/auth.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,8 +54,9 @@ import { PatientdetailsComponent } from './patientdetails/patientdetails.compone
     MatTableModule,
     MatButtonModule,
     FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
