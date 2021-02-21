@@ -18,4 +18,10 @@ export class AuthService {
     return this.http.post("http://localhost:5000/auth/doctor",data,{headers:headers});
 
   }
+  isAuthenticated(){
+    if(localStorage.getItem('token'))
+    return true;
+    else
+    return false
+  }
 }
