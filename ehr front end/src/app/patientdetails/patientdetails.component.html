@@ -1,0 +1,62 @@
+<div class="patientdetails-wrapper mat-elevation-z8">
+   <div class="patient-details mp-1">
+       <p class="heading width-100">Patient Details</p>
+       <div class="left-container">
+        <div class="label-text">
+            <p><span class="label">Pid:</span><span class="txt age">20</span></p>
+            </div>
+            <div class="label-text">
+                <p><span class="label">Name :</span><span class="txt dob">04/03/2000</span></p>
+            </div>
+            <div class="label-text">
+                <p><span class="label">Gender:</span><span class="txt bloodgroup">AB+</span></p>
+            </div>
+            <div class="label-text">
+                <p><span class="label">Age        :</span><span class="txt age">20</span></p>
+               </div>
+       </div>
+       <div class="right-container">
+            <div class="label-text">
+                <p><span class="label">DOB        :</span><span class="txt dob">04/03/2000</span></p>
+            </div>
+            <div class="label-text">
+                <p><span class="label">Blood Group:</span><span class="txt bloodgroup">AB+</span></p>
+            </div>
+            <div class="label-text">
+                <p><span class="label">Address:</span><span class="txt bloodgroup">AB+</span></p>
+            </div>
+            <div class="label-text">
+                <p><span class="label">Contact No:</span><span class="txt bloodgroup">AB+</span></p>
+            </div>
+       </div>
+        </div>
+   <div class="allergies mp-1">
+       <p class="heading">Allergies</p>
+       <div *ngFor="let item of allergyList">
+           <p>->  <span>{{item}}</span></p>
+       </div>
+   </div>
+   <div class="past-surgeries mp-1">
+       <p class="heading">Past Surgeries</p>
+   </div>
+   <div class="past-treatments mp-1">
+    <p class="heading">Treatments</p>
+</div>
+   <div class="prev-checkupdetails mp-1">
+       <table class="table table-bordered">
+           <tr>
+               <th>No.</th>
+               <th>Date</th>
+               <th>Reason</th>
+               <th>Bp</th>
+               <th>Weight</th>
+               <th>Notes</th>
+               <th>Medicines</th>
+
+           </tr>
+       </table>
+   </div>
+
+
+   
+</div>

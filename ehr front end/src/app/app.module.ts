@@ -17,6 +17,12 @@ import { SearchComponent } from './search/search.component';
 import { MatTableModule } from '@angular/material/table';
 import { DataSource } from '@angular/cdk/table';
 import { DoctorComponent } from './doctor/doctor.component';
+import { MenuListItemComponent } from './sidebar/menu-list-item/menu-list-item.component';
+import { CheckinListComponent } from './checkin-list/checkin-list.component';
+import {MatButtonModule} from '@angular/material/button';
+import { CheckinComponent } from './checkin/checkin.component';
+import { PrescriptionComponent } from './prescription/prescription.component';
+import { PatientdetailsComponent } from './patientdetails/patientdetails.component';
 import { AuthService } from './service/auth.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -32,7 +38,12 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     AppointmentComponent,
     SearchComponent,
-    DoctorComponent
+    DoctorComponent,
+    MenuListItemComponent,
+    CheckinListComponent,
+    CheckinComponent,
+    PrescriptionComponent,
+    PatientdetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +52,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     BrowserAnimationsModule,
     MatTableModule,
+    MatButtonModule,
     FormsModule,
     HttpClientModule
   ],

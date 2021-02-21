@@ -1,0 +1,63 @@
+.patientdetails-wrapper{
+    width:95%;
+    height:auto;
+    margin:1rem;
+   padding:1rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.patient-details{
+    width:98%;
+    border: 1px solid grey;
+    display:flex;
+    flex-wrap: wrap;
+}
+.width-100{
+    width:100%;
+}
+.left-container{
+    width:50%;
+}
+.right-container{
+    width:50%;
+}
+.allergies{
+    width:20%;
+    border: 1px solid grey;
+    font-size: 15px;
+
+}
+.past-surgeries{
+    width:35%;
+    border: 1px solid grey;
+    font-size: 15px;
+}
+.past-treatments{
+    width:35%;
+    border: 1px solid grey;
+    font-size: 15px;
+}
+.prev-checkupdetails{
+    width:98%;
+    border: 1px solid grey;
+}
+.heading{
+    font-size:medium;
+    font-weight:1000;
+}
+.label{
+    font-size: 15px;
+    font-weight: bold;
+}
+.txt{
+    font-size:15px;
+}
+th{
+    font-size:small;
+    font-weight: bold;
+}
+.mp-1{
+ margin:10px;
+ padding:2%;
+}

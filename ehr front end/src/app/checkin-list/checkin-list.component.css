@@ -1,0 +1,55 @@
+h1{
+    font-weight: bold;
+}
+table{
+    width: 100%;
+}
+
+.doctor-dashboard-wrapper{
+    display: inline-block;
+    width:80%;
+}
+/* .input-group{
+    width:30%;
+} */
+form{
+    float:right;
+    width:30%;
+}
+form.searchbar input[type=text] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid grey;
+    width:85%;
+    
+    background: white;
+  }
+  
+  form button {
+    /* float: left; */
+    width: 15%;
+    padding: 8px;
+    background: #563d7c;
+    color: white;
+    font-size: 12px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form  button:hover {
+    background: #563d7c;
+  }
+  
+  /* form.searchbar::after {
+    content: "";
+    clear: both;
+    display: table;
+  } */
+  .checkin-btn a{
+    color:white;
+    text-decoration: none;
+  }
+  .checkin-btn:hover{
+    box-shadow: 10px 12px 32px -25px rgba(141,140,147,0.75);
+  }

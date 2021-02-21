@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ehr';
-  user=1;
+  user:Number=1;
+  ngOnInit(): void {
+    console.log("user from app:"+this.user);
+  }
 }
